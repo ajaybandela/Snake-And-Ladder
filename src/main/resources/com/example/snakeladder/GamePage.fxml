@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.snakeladder.GamePageController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <ImageView fitWidth="500" fitHeight="500" layoutX="300" layoutY="0" >
+            <image>
+                <Image url="@GameBoard.jpg"/>
+            </image>
+        </ImageView>
+
+        <ImageView fitWidth="25" fitHeight="50" layoutX="20" layoutY="250" >
+            <image>
+                <Image url="@red.png"/>
+            </image>
+        </ImageView>
+        <Text   layoutX="100" layoutY="280 " >Player 1</Text>
+
+        <ImageView fitWidth="25" fitHeight="50" layoutX="20" layoutY="320" >
+            <image>
+                <Image url="@blue.png"/>
+            </image>
+        </ImageView>
+        <Text   layoutX="100" layoutY="350 " >Player 2</Text>
+
+        <ImageView fx:id="player1" fitWidth="25" fitHeight="50" layoutX="280" layoutY="450" >
+            <image>
+                <Image url="@red.png"/>
+            </image>
+        </ImageView>
+
+
+
+        <ImageView fx:id="player2" fitWidth="25" fitHeight="50" layoutX="250" layoutY="450" >
+            <image>
+                <Image url="@blue.png"/>
+            </image>
+        </ImageView>
+
+        <Text fx:id="turnName" fill="blue" layoutX="100" layoutY="130" >Player 1 Turn</Text>
+
+        <ImageView fitWidth="70" fitHeight="70" layoutX="100" layoutY="150"  onMouseClicked="#rollDice">
+            <image>
+                <Image url="@Dice.png"/>
+            </image>
+        </ImageView>
+
+        <Text fx:id="Number" layoutX="130" layoutY="250" ></Text>
+
+    </children>
+</AnchorPane>
